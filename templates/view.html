@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>display</title>
+	<script src="https://cdn.bootcss.com/echarts/4.2.0-rc.2/echarts.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body align="center">
+	<h1>数据图表展示</h1>
+    <div align="center">
+	<div id="main"  style="width: 600px;height:400px;"></div>
+	<script type="text/javascript" >
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+
+        // 显示标题，图例和空的坐标轴
+        myChart.setOption({
+            title: {
+                text:'人流量统计'
+            },
+            tooltip: {},
+            legend: {
+                data:['人流量']
+            },
+            xAxis: {
+                data: []
+            },
+            yAxis: {},
+            series: [{
+                name: '人流量',
+                type: 'bar',
+                data: []
+            }]
+        });
+        myChart.showLoading();
+        // 异步加载数据
+        $.get('/data').done(function (data) {
+            // 填入数据
+            myChart.setOption({
+                xAxis: {
+                    data: data.Time
+                },
+                series: [{
+                    // 根据名字对应到相应的系列
+                    name: '人流量',
+                    data: data.Person_Number
+                }]
+            });
+        });
+        myChart.hideLoading();
+    </script>
+    </div>
+    <br>
+    <button onclick = "window.location.href='/'" >返回主页</button>
+</body>
+</html>

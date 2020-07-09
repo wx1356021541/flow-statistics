@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>display</title>
+	<script src="https://cdn.bootcss.com/echarts/4.2.0-rc.2/echarts.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body align="center">
+	<h1>数据图表展示</h1>
+	<img src="{{url_for('static',filename='pic1.jpg',_t=val1)}}" width="480" height="360">
+    <br>
+    <br>
+    <img src="{{url_for('static',filename='pic2.jpg',_t=val1)}}" width="480" height="360">
+    <br>
+    <button onclick = "window.location.href='/'" >返回主页</button>
+</body>
+</html>

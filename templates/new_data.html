@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"> 
+	<title>人流量监控系统</title>
+	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">  
+	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<style>
+  .fakeimg {
+        height: 500px;
+        width: 750px;
+        background: #aaa;
+    }
+  .titlemain{
+    padding-top: 30px;
+    font-weight: bold;
+    color: #4F4F4F;
+    font-size:50px;
+    margin:0px;
+  }
+  .title{
+    color: #4F4F4F;
+    font-size:50px;
+    margin:0px;
+  }
+  </style>
+</head>
+<body style="background-image: url('../static/images/3.jpg'); background-repeat: no-repeat; background-attachment: fixed;background-size: 100% 100%;text-align: center;">
+
+  <p class="titlemain">人流量监控系统 监控图像</p>
+  <button onclick = "window.location.href='/save'" style="width: 180px; height: 50px; font-size: 20px;">停止采集</button></a>
+
+  </a>
+  <br>
+  <br>
+  <div align="center">
+    <div class="fakeimg">
+    <img  src="{{ url_for('video_feed') }}"  align="center">
+    </div>
+  </div>
+<br>
+<br>
+<br>
+
+</body>
+</html>

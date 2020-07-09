@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>history&nbsp;&nbsp;&nbsp;analyse</title>
+	<style type="text/css">
+	#file
+	{
+	text-align:center;
+	margin:0px;
+	border:none;
+	font-size: 20px;
+	padding:10px 10px; 
+	background:#dddddd;
+	width:280px;
+	border-radius:25px;
+	-moz-border-radius:25px; /* 老的 Firefox */
+	outline: medium;
+	}
+	input,button
+	{
+	text-align:center;
+	border:none;
+	font-size: 20px;
+	padding:10px 10px; 
+	background:#dddddd;
+	width:100px;
+	border-radius:25px;
+	-moz-border-radius:25px; /* 老的 Firefox */
+	outline: medium;
+	}
+	.titlemain{
+		padding-top: 100px;
+		font-weight: bold;
+		color: #4F4F4F;
+		font-size:50px;
+		margin:0px;
+	}
+	.title{
+		color: #4F4F4F;
+		font-size:50px;
+		margin:0px;
+	}
+	</style>
+</head>
+<body align="center" style="background-image: url('../static/images/3.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 100%;">
+	<h1>use history data to analyse</h1>
+	<p></p>
+	<p class="titlemain">数据分析</p>
+	<p class="title">Data Analysis</p>
+	<form action = "/view" method="POST">
+		<input type="file" name="myfile" id="file">
+		<br>
+		<input type="submit" name="提交" class="temp">
+	</form>
+	<br>
+	<button onclick = "window.location.href='/'"  >返回
+      </button>
+</body>
+</html>
